@@ -2,6 +2,11 @@ import React, { useState } from "react";
 
 function App() {
 	const [todo, setTodo] = useState("");
+    const [todoList, setTodoList] = useState([]);
+    const addTodo = () => {
+        setTodoList(prevTodoList => [...prevTodoList, todo]);
+        setTodo("");
+    };
 	return (
 		<div>
 			<h1>Todo App</h1>
@@ -10,7 +15,7 @@ function App() {
 				value={todo}
 				onChange={(event) => setTodo(event.target.value)}
 			/>
-			<button>Add Todo</button>
+			<button onClick={addTodo}>Add Todo</button>
 		</div>
 	);
 }
