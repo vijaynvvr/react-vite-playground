@@ -16,6 +16,11 @@ function App() {
 				onChange={(event) => setTodo(event.target.value)}
 			/>
 			<button onClick={addTodo}>Add Todo</button>
+            {
+                todoList.map(todo => {
+                    return <p>{todo}</p>
+                })
+            }
 		</div>
 	);
 }
