@@ -3,7 +3,7 @@ import React from "react";
 function App() {
 	return (
         <div>
-            <h1>React Application Boilerplate</h1>
+            <h1>Todo App</h1>
         </div>
 	);
 }
